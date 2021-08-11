@@ -9,7 +9,7 @@ from google.cloud import bigquery
 import os
 
 # Tell Google API where the credentials are
-credential_path = '../Credentials/chicago-crime-319621-bb3dcff247ca.json'
+credential_path = 'Credentials/chicago-crime-319621-bb3dcff247ca.json'
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = credential_path
 client = bigquery.Client()
 
