@@ -13,7 +13,6 @@ from crime_over_time import crime_over_time
 from crime_by_week import crime_by_week
 from crime_by_hour import crime_by_hour
 
-
 st.title("Chicago Crime")
 
 if os.path.isfile("google-credentials.json"):
@@ -41,12 +40,12 @@ if os.path.isfile("google-credentials.json"):
     # Set up side bar
     question = st.sidebar.selectbox(
         "Choose Categories You Want To Explore",
-        ("Prevalent Crime", "Crime Over Time", "Crime by Week", "Crime by Time of Day"),
+        ("Prevalent Crime", "Crime Over Time", "Crime by Weekday", "Crime by Time of Day"),
     )
 
     # Initiate a slidebar to get year range
     year_range = st.sidebar.slider(
-        "Select range of year", min_year, max_year, (min_year, max_year)
+        "Select range of year", min_year, max_year, (2015, max_year)
     )
 
     # Allow user to include domestic
@@ -78,7 +77,7 @@ if os.path.isfile("google-credentials.json"):
 
             crime_over_time(client, year_range, exclude_domestic, crimes_dict)
 
-        if question == "Crime by Week":
+        if question == "Crime by Weekday":
 
             crime_by_week(client, year_range, exclude_domestic, crimes_dict)
 
