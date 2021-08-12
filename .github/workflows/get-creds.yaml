@@ -1,10 +1,9 @@
 
 name: Get GCP Credentials
-on:
-  schedule:
-    - cron: '*/15 * * * *' # every 15 minutes
+on: [push, deployment, pull_request]
 env:
   CHICAGO_CRIME_JSON: ${{ secrets.CHICAGO_CRIME_JSON }}
+  TEST: 'testing'
 jobs:
   get-env-creds:
     runs-on: ubuntu-latest
