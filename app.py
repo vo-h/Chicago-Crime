@@ -6,5 +6,10 @@ Created on Thu Aug 12 01:24:01 2021
 """
 
 import streamlit as st
+import os
 
 st.title("Chicago Crime")
+
+
+if 'CHICAGO_CRIME' in os.environ:
+    st.write('here')
