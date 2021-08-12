@@ -11,5 +11,5 @@ import os
 st.title("Chicago Crime")
 
 
-if 'CHICAGO_CRIME' in os.environ:
+if os.path.isfile('google-credentials.json'):
     st.write('here')
