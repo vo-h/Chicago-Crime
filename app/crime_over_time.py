@@ -57,6 +57,22 @@ def crime_over_time(client, year_range, exclude_domestic, crimes_dict):
         labels={"value": "monthly count"},
     )
 
+    # Fix fig size
+    fig1.update_layout(
+        autosize=False,
+        width=800,
+        height=800,
+        margin=dict(l=50, r=50, b=100, t=100, pad=4),
+        paper_bgcolor="LightSteelBlue",
+    )
+    fig2.update_layout(
+        autosize=False,
+        width=800,
+        height=800,
+        margin=dict(l=50, r=50, b=100, t=100, pad=4),
+        paper_bgcolor="LightSteelBlue",
+    )
+
     # Plot data
     st.plotly_chart(fig1)
     st.plotly_chart(fig2)
