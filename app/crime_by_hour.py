@@ -28,6 +28,20 @@ def crime_by_hour(client, year_range, exclude_domestic, crimes_dict):
     fig1 = px.bar(chicago, x=chicago.index, y=hyde_park.columns, title=f'Crime Count in Chicago by Hour from {year_range[0]} to {year_range[1]}')
     fig2 = px.bar(hyde_park, x=hyde_park.index, y=hyde_park.columns, title=f'Crime Count in Hyde Park by Hour from {year_range[0]} to {year_range[1]}')
 
+    # Fix fig size
+    fig1.update_layout(
+        autosize=False,
+        width=800,
+        height=500,
+        margin=dict(l=50, r=50, b=100, t=100, pad=4),
+    )
+    fig2.update_layout(
+        autosize=False,
+        width=800,
+        height=500,
+        margin=dict(l=50, r=50, b=100, t=100, pad=4),
+    )
+
     # Plot
     st.plotly_chart(fig1)
     st.plotly_chart(fig2)
