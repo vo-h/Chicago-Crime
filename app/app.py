@@ -58,7 +58,7 @@ if os.path.isfile("google-credentials.json"):
             client=client, year_range=year_range, exclude_domestic=exclude_domestic
         )
 
-    if question in ["Crime Over Time", "Crime by Week", "Crime by Time of Day"]:
+    if question in ["Crime Over Time", "Crime by Weekday", "Crime by Time of Day"]:
 
         # Provide choices
         st.sidebar.write(" ")
