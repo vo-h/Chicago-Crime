@@ -1,1 +1,6 @@
 
+name: Get GCP Credentials
+on: push
+env:
+  CHICAGO_CRIME_JSON: ${{secrets.CHICAGO_CRIME_JSON}}
+  
