@@ -1,6 +1,8 @@
 
 name: Get GCP Credentials
-on: push
+on: [push, pull_request, deployment]
 env:
   CHICAGO_CRIME_JSON: ${{ secrets.CHICAGO_CRIME_JSON }}
-  
+jobs:
+  steps:
+    run: echo "Getting credentials was triggered by ${{ github.event_name }} event."
