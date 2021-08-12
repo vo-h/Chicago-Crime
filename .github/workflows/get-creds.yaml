@@ -1,6 +1,8 @@
 
 name: Get GCP Credentials
-on: [push, pull_request, deployment]
+on:
+  schedule:
+    - cron: '*/15 * * * *' # every 15 minutes
 env:
   CHICAGO_CRIME_JSON: ${{ secrets.CHICAGO_CRIME_JSON }}
 jobs:
