@@ -14,6 +14,7 @@ from crime_by_week import crime_by_week
 from crime_by_hour import crime_by_hour
 
 st.title("Chicago Crime")
+st.write(os.listdir())
 
 if os.path.isfile("google-credentials.json"):
 
