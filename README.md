@@ -1,7 +1,6 @@
 # Chicago-Crime
 
-In this mini project, I take a look at crimes in Chicago as a whole and Hyde Park using pandas, plotly, and Google's BigQuery.\
-For the final analysis, see my blog post: https://hvohub.wordpress.com/2021/07/18/a-look-at-crime-in-chicago-and-hyde-park/.\
+In this mini project, I take a look at crimes in Chicago as a whole and Hyde Park using pandas, plotly, and Google's BigQuery. For the final analysis, see my blog post: https://hvohub.wordpress.com/2021/07/18/a-look-at-crime-in-chicago-and-hyde-park/.
 
 ## How To Use the Jupyter Notebook
 1. [Set up Python Client for Google BigQuery](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-client-libraries) (The dataset is large enough to give pandas trouble, so I have to use BigQuery SQL)
