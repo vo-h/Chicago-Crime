@@ -14,7 +14,6 @@ from crime_by_week import crime_by_week
 from crime_by_hour import crime_by_hour
 
 st.title("Chicago Crime")
-st.write(os.listdir())
 
 if os.path.isfile("google-credentials.json"):
 
@@ -39,7 +38,7 @@ if os.path.isfile("google-credentials.json"):
     )
     
     # Add image
-    st.sidebar.image("image.jpg")
+    st.sidebar.image("app/image.jpg")
 
     # Set up side bar
     question = st.sidebar.selectbox(
