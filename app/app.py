@@ -14,6 +14,7 @@ from crime_by_week import crime_by_week
 from crime_by_hour import crime_by_hour
 
 st.title("Chicago Crime")
+st.write("Data from [Chicago Police Department](https://console.cloud.google.com/marketplace/product/city-of-chicago-public-data/chicago-crime?project=chicago-crime-319621&folder=&organizationId=)")
 
 if os.path.isfile("google-credentials.json"):
 
