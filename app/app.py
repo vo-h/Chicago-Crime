@@ -36,6 +36,9 @@ if os.path.isfile("google-credentials.json"):
         .to_dataframe()
         .loc[0, "f0_"]
     )
+    
+    # Add image
+    st.sidebar.image("image.jpg")
 
     # Set up side bar
     question = st.sidebar.selectbox(
