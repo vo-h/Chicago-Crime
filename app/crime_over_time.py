@@ -36,9 +36,15 @@ def crime_over_time(client, year_range, exclude_domestic, crimes_dict):
     chicago = (
         client.query(sql_chicago).to_dataframe().sort_values("date", ignore_index=True)
     )
+    chicago = chicago[chicago['date'] >= str(year_range[0])]
+    chicago = chicago[chicago['date'] <= str(year_range[1] + 1)]
+    
+    
     hyde_park = (
         client.query(sql_hp).to_dataframe().sort_values("date", ignore_index=True)
     )
+    hyde_park = hyde_park[hyde_park['date'] >= str(year_range[0])]
+    hyde_park = hyde_park[hyde_park['date'] <= str(year_range[1] + 1)]
 
     # Visualize with plotly
     fig1 = px.line(
