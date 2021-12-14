@@ -1,4 +1,4 @@
-# Chicago-Crime
+# Chicago Crime
 
 In this mini project, I take a look at crimes in Chicago as a whole and Hyde Park using pandas, plotly, and Google's BigQuery.
 
