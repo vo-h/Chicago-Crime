@@ -9,7 +9,7 @@ In this mini project, I take a look at crimes in Chicago as a whole and Hyde Par
 
 ## App Deployment
 I also created a [web app](https://chicago-crime-dashboard.herokuapp.com/) with limited functionalities using Heroku. It took me quite some time to figure out how to integrate Heroku, Google 
-Cloud and GitHub so that I don't need to host locally. Found this [link](https://devdojo.com/bryanborge/adding-google-cloud-credentials-to-heroku)
+Cloud and GitHub so that I can store all my code on GitHub. Found this [link](https://devdojo.com/bryanborge/adding-google-cloud-credentials-to-heroku)
 that was super useful. Also, to deploy Heroku from GitHub, simply add the Procfile and setup.sh files in your repo, and add required packages in requirement.txt.
 
 
